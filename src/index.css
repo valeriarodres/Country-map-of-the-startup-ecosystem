@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bento-bg: #f3f4f6;
+  --color-bento-card: #ffffff;
+  --color-bento-primary: #4f46e5;
+  --color-bento-text-main: #111827;
+  --color-bento-text-muted: #6b7280;
+  --color-bento-accent: #10b981;
+  --color-bento-border: #e5e7eb;
+}
+
+@layer base {
+  body {
+    @apply bg-[--color-bento-bg] text-[--color-bento-text-main] antialiased;
+  }
+}
+
+.bento-card {
+  @apply bg-[--color-bento-card] rounded-[20px] border border-[--color-bento-border] p-6 flex flex-col shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] transition-all hover:shadow-md;
+}
+
+.bento-title {
+  @apply text-[12px] uppercase tracking-[0.05em] text-[--color-bento-text-muted] mb-3 font-semibold;
+}
+
+.type-pill {
+  @apply text-[10px] font-extrabold bg-zinc-900 text-white px-2 py-0.5 rounded-sm mb-2 w-fit uppercase;
+}
+
+.tag-pill {
+  @apply bg-indigo-50 text-indigo-600 px-3 py-1.5 rounded-full text-sm font-semibold inline-block;
+}
+
+
